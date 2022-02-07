@@ -1,0 +1,80 @@
+@import '../../styles/core';
+
+.container {
+  @include main;
+  margin-bottom: 5%;
+  .wraper {
+    margin-top: 2%;
+    width: 60%;
+    @include directionY;
+    @include content-center;
+    .notifFailed {
+      font-weight: bold;
+      text-align: center;
+      font-size: 24px;
+      color: $color-bg;
+    }
+    .form {
+      @include content-center;
+      form {
+        input {
+          // @include main;
+          height: 24px;
+          margin-right: 10px;
+          border-radius: 6px;
+        }
+        button {
+          cursor: pointer;
+          background-color: $color-dark-blue;
+          color: $color-white;
+          @include main;
+          width: 80px;
+          height: 28px;
+          border-radius: 6px;
+        }
+      }
+    }
+    .content {
+      // border: 1px solid red;
+      // margin-top: -40px;
+      @include directionX;
+      justify-content: space-between;
+      .card {
+        @include directionY;
+        width: 50%;
+        @include content-center;
+        align-items: center;
+        img {
+          width: 90%;
+        }
+        .name {
+          margin-top: -60px;
+          margin-bottom: 40px;
+          font-size: 40px;
+          font-weight: bold;
+        }
+      }
+      .info {
+        @include directionY;
+        justify-content: center;
+        width: 50%;
+        text-align: left;
+        @include main;
+        font-size: 20px;
+      }
+    }
+    .btn_catch {
+      @include content-center;
+      width: 20%;
+      button {
+        @include main;
+        width: 100%;
+        height: 30px;
+        border-radius: 10px;
+        color: $color-white;
+        cursor: pointer;
+        background-color: $color-bg;
+      }
+    }
+  }
+}

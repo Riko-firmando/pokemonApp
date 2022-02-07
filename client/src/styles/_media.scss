@@ -1,0 +1,14 @@
+$screen-ssm-limit: 320px;
+$screen-sm-limit: 767px;
+
+@mixin apply-at-ssm-size {
+  @media (max-width: $screen-ssm-limit) {
+    @content;
+  }
+}
+
+@mixin apply-at-sm-size {
+  @media (max-width: $screen-sm-limit) {
+    @content;
+  }
+}

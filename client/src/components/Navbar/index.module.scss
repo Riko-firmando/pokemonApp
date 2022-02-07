@@ -1,0 +1,28 @@
+@import '../../styles/core';
+
+.container {
+  height: 120px;
+  background-color: $color-yellow;
+  border-bottom: 2px solid $color-dark-blue;
+  .wraper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 30px;
+    .title {
+      cursor: pointer;
+      margin-top: 2%;
+      width: 10%;
+    }
+    .navbar {
+      cursor: pointer;
+      align-items: center;
+      @include main;
+      margin-top: 3%;
+      display: flex;
+      flex-direction: row;
+      font-size: 18px;
+      gap: 30px;
+    }
+  }
+}
