@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import classes from "./index.module.scss";
 
 export const Card = ({ pokemon, toDetail, num }) => {

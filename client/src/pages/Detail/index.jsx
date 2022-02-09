@@ -67,7 +67,7 @@ const Detail = () => {
               </span>
               <br />
               <span>
-                <b>Move :</b> {pokemon.moves}{" "}
+                <b>Moves :</b> {pokemon.moves}{" "}
               </span>
               <br />
               <span>
