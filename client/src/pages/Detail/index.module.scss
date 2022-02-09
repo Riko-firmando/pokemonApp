@@ -9,7 +9,7 @@
     @include directionY;
     @include content-center;
     align-items: center;
-    @include apply-at-sm-size {
+    @include apply-tablet {
       margin-top: 220px;
     }
     .form {
@@ -18,18 +18,8 @@
       width: 50%;
       form {
         input {
-          // @include main;
           height: 24px;
           margin-right: 10px;
-          border-radius: 6px;
-        }
-        button {
-          cursor: pointer;
-          background-color: $color-dark-blue;
-          color: $color-white;
-          @include main;
-          width: 80px;
-          height: 28px;
           border-radius: 6px;
         }
       }
@@ -47,8 +37,6 @@
       color: white;
     }
     .content {
-      // border: 1px solid red;
-      // margin-top: -40px;
       @include directionX;
       background-color: rgb(233, 231, 231);
       padding: 15px;
@@ -57,9 +45,9 @@
       align-items: center;
       width: 700px;
       height: 400px;
-      @include apply-at-sm-size {
+      @include apply-tablet {
         width: 300px;
-        height: 300px;
+        height: 350px;
         position: relative;
         align-items: flex-end;
         padding-bottom: 40px;
@@ -67,7 +55,7 @@
       .card {
         width: 50%;
         text-align: center;
-        @include apply-at-sm-size {
+        @include apply-tablet {
           position: absolute;
           top: -200px;
           right: 125px;
@@ -75,28 +63,22 @@
         img {
           width: 300px;
           height: 300px;
-          // height: 200px;
-          @include apply-at-sm-size {
-            // background-color: cadetblue;
+          @include apply-tablet {
             height: 250px;
             width: 250px;
           }
         }
       }
       .detail_inform {
-        // background-color: cadetblue;
         width: 40%;
-        @include apply-at-sm-size {
+        @include apply-tablet {
           width: 100%;
         }
         .inform {
           div {
-            // margin: 2px 0px;
             span {
               font-size: 14px;
             }
-            // margin-top: 15px;
-            // background-color: cadetblue;
           }
         }
       }

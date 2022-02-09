@@ -7,7 +7,7 @@
   margin-bottom: 12px;
   text-align: center;
   cursor: pointer;
-  @include apply-at-sm-size {
+  @include apply-tablet {
     width: 130px;
   }
   .num {
@@ -17,7 +17,7 @@
   img {
     width: 180px;
     height: 180px;
-    @include apply-at-sm-size {
+    @include apply-tablet {
       height: 100px;
       width: 100px;
     }
@@ -25,7 +25,7 @@
   p {
     font-size: 30px;
     margin-bottom: 14px;
-    @include apply-at-sm-size {
+    @include apply-tablet {
       font-size: 20px;
     }
   }

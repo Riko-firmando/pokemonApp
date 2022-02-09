@@ -13,7 +13,7 @@
       flex-wrap: wrap;
       gap: 1%;
       justify-content: center;
-      @include apply-at-sm-size {
+      @include apply-tablet {
         padding: 0px 10px;
         column-gap: 13px;
       }

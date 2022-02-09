@@ -1,14 +1,14 @@
-$screen-ssm-limit: 320px;
-$screen-sm-limit: 767px;
+$screen-mobile: 320px;
+$screen-tablet: 767px;
 
-@mixin apply-at-ssm-size {
-  @media (max-width: $screen-ssm-limit) {
+@mixin apply-mobile {
+  @media (max-width: $screen-mobile) {
     @content;
   }
 }
 
-@mixin apply-at-sm-size {
-  @media (max-width: $screen-sm-limit) {
+@mixin apply-tablet {
+  @media (max-width: $screen-tablet) {
     @content;
   }
 }

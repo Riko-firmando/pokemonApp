@@ -46,7 +46,7 @@ export const getPokemon = (id) => {
           types: data.types.map((item) => item.type.name).join(", "),
           moves: data.moves
             .map((item) => item.move.name)
-            .slice(0, 4)
+            .slice(0, 3)
             .join(", "),
           abilities: data.abilities.map((item) => item.ability.name).join(", "),
           HP: data.stats[0].base_stat,

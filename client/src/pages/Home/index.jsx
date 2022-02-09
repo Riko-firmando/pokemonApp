@@ -22,9 +22,7 @@ const Home = () => {
     <div className={classes.container}>
       <Navbar />
       <div className={classes.home_container}>
-        <div className={classes.btn}>
-          {/* <span>Next</span> <span>Previous</span> */}
-        </div>
+        <div className={classes.btn}></div>
         <div className={classes.wraper}>
           {pokemons &&
             pokemons.map((pokemon, idx) => {

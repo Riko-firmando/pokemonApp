@@ -1,7 +1,6 @@
 @import "../../styles/core";
 
 .container {
-  // background-color: rgb(223, 222, 222);
   .home_container {
     text-align: center;
     .btn {
@@ -31,7 +30,7 @@
       flex-wrap: wrap;
       gap: 1%;
       justify-content: center;
-      @include apply-at-sm-size {
+      @include apply-tablet {
         column-gap: 15px;
       }
     }

@@ -65,6 +65,14 @@ const Detail = () => {
               <span>
                 <b>Abilities :</b> {pokemon.abilities}{" "}
               </span>
+              <br />
+              <span>
+                <b>Move :</b> {pokemon.moves}{" "}
+              </span>
+              <br />
+              <span>
+                <b>Types :</b> {pokemon.types}{" "}
+              </span>
             </div>
             <div className={classes.inform}>
               <div>
