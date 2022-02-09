@@ -1,0 +1,43 @@
+@import "../../styles/core";
+
+.container {
+  background-color: rgb(61, 61, 61);
+  padding: 10px;
+  color: white;
+  margin-bottom: 12px;
+  text-align: center;
+  cursor: pointer;
+  @include apply-at-sm-size {
+    width: 130px;
+  }
+  .myCard {
+    img {
+      width: 180px;
+      height: 180px;
+      margin-bottom: 15px;
+      @include apply-at-sm-size {
+        height: 120px;
+        width: 120px;
+      }
+    }
+    .btn {
+      button {
+        background-color: rgb(61, 61, 61);
+        color: white;
+        font-weight: bold;
+        border: 1px solid white;
+        @include apply-at-sm-size {
+          width: 100px;
+        }
+      }
+    }
+    .btn button:nth-child(1):hover {
+      background-color: white;
+      color: black;
+    }
+    .btn button:nth-child(2):hover {
+      background-color: white;
+      color: black;
+    }
+  }
+}

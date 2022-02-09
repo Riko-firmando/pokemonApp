@@ -1,28 +1,138 @@
-@import '../../styles/core';
+@import "../../styles/core";
 
 .container {
-  height: 120px;
-  background-color: $color-yellow;
-  border-bottom: 2px solid $color-dark-blue;
-  .wraper {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  background-color: rgb(224, 221, 221);
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 9px 150px;
+  align-items: center;
+  @include apply-at-sm-size {
+    padding: 9px 20px;
+  }
+
+  .title {
+    cursor: pointer;
+    // background-color: rebeccapurple;
+    margin-bottom: 3px;
+    height: 40px;
+    width: 150px;
+    @include apply-at-sm-size {
+      height: 30px;
+      width: 130px;
+    }
+  }
+  .navigasi {
+    color: black;
+    cursor: pointer;
+    @include main;
     display: flex;
     flex-direction: row;
+    font-size: 18px;
+    width: 230px;
     justify-content: space-between;
-    padding: 0px 30px;
-    .title {
-      cursor: pointer;
-      margin-top: 2%;
-      width: 10%;
-    }
-    .navbar {
-      cursor: pointer;
-      align-items: center;
-      @include main;
-      margin-top: 3%;
+    font-weight: bold;
+    margin-right: 15px;
+    @include apply-at-sm-size {
+      position: absolute;
+      width: 150px;
       display: flex;
-      flex-direction: row;
-      font-size: 18px;
-      gap: 30px;
+      flex-direction: column;
+      top: 52px;
+      right: -14px;
+      transition: all 200ms ease;
+      transform: translateX(153px);
+      display: none;
+      z-index: 2;
+    }
+    div {
+      @include apply-at-sm-size {
+        display: flex;
+        background-color: rgb(224, 221, 221);
+        width: 100%;
+        // padding: 40px 10px;
+        height: 100px;
+        align-items: center;
+        justify-content: center;
+      }
+      span {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+  .navigasi.toggle {
+    transform: translateX(0);
+  }
+  .navigasi div:nth-child(1) {
+    // background-color: beige;
+    @include apply-at-sm-size {
+      border-bottom: 1px solid black;
+    }
+  }
+  .navigasi div {
+    border-bottom: 3px solid transparent;
+    transition: all 200ms ease;
+    padding-bottom: 2px;
+  }
+  .navigasi div:nth-child(1):hover {
+    border-bottom: 3px solid black;
+    @include apply-at-sm-size {
+      border: none;
+      background-color: black;
+      span {
+        color: white;
+      }
+    }
+  }
+  .navigasi div:nth-child(2):hover {
+    border-bottom: 3px solid black;
+    @include apply-at-sm-size {
+      border: none;
+      background-color: black;
+      span {
+        color: white;
+      }
+    }
+  }
+  .humbergerMenu {
+    // background-color: cadetblue;
+    height: 25px;
+    width: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+    position: relative;
+    @include apply-at-sm-size {
+      display: flex;
+    }
+
+    input {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      z-index: 2;
+    }
+    div {
+      transition: all 200ms ease;
+      height: 3px;
+      width: 100%;
+      background-color: black;
+      transform-origin: 0 0;
+    }
+    .check:checked ~ div:nth-child(2) {
+      transform: rotate(45deg) translatex(2px);
+    }
+    .check:checked ~ div:nth-child(3) {
+      transform: scale(0);
+      opacity: 0;
+    }
+    .check:checked ~ div:nth-child(4) {
+      transform: rotate(-45deg) translateX(-1px);
     }
   }
 }

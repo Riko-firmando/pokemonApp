@@ -1,4 +1,4 @@
-@import '../../styles/core';
+@import "../../styles/core";
 
 .container {
   @include main;
@@ -8,14 +8,14 @@
     width: 60%;
     @include directionY;
     @include content-center;
-    .notifFailed {
-      font-weight: bold;
-      text-align: center;
-      font-size: 24px;
-      color: $color-bg;
+    align-items: center;
+    @include apply-at-sm-size {
+      margin-top: 220px;
     }
     .form {
       @include content-center;
+      height: 50px;
+      width: 50%;
       form {
         input {
           // @include main;
@@ -34,24 +34,70 @@
         }
       }
     }
+    button {
+      background-color: rgb(255, 255, 255);
+      border: 2px solid black;
+      color: black;
+      font-weight: bold;
+      padding-inline: 20px;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: black;
+      color: white;
+    }
     .content {
       // border: 1px solid red;
       // margin-top: -40px;
       @include directionX;
-      justify-content: space-between;
+      background-color: rgb(233, 231, 231);
+      padding: 15px;
+      border-radius: 10px;
+      justify-content: center;
+      align-items: center;
+      width: 700px;
+      height: 400px;
+      @include apply-at-sm-size {
+        width: 300px;
+        height: 300px;
+        position: relative;
+        align-items: flex-end;
+        padding-bottom: 40px;
+      }
       .card {
-        @include directionY;
         width: 50%;
-        @include content-center;
-        align-items: center;
-        img {
-          width: 90%;
+        text-align: center;
+        @include apply-at-sm-size {
+          position: absolute;
+          top: -200px;
+          right: 125px;
         }
-        .name {
-          margin-top: -60px;
-          margin-bottom: 40px;
-          font-size: 40px;
-          font-weight: bold;
+        img {
+          width: 300px;
+          height: 300px;
+          // height: 200px;
+          @include apply-at-sm-size {
+            // background-color: cadetblue;
+            height: 250px;
+            width: 250px;
+          }
+        }
+      }
+      .detail_inform {
+        // background-color: cadetblue;
+        width: 40%;
+        @include apply-at-sm-size {
+          width: 100%;
+        }
+        .inform {
+          div {
+            // margin: 2px 0px;
+            span {
+              font-size: 14px;
+            }
+            // margin-top: 15px;
+            // background-color: cadetblue;
+          }
         }
       }
       .info {
@@ -61,19 +107,6 @@
         text-align: left;
         @include main;
         font-size: 20px;
-      }
-    }
-    .btn_catch {
-      @include content-center;
-      width: 20%;
-      button {
-        @include main;
-        width: 100%;
-        height: 30px;
-        border-radius: 10px;
-        color: $color-white;
-        cursor: pointer;
-        background-color: $color-bg;
       }
     }
   }

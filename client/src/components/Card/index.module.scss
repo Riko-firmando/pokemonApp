@@ -1,57 +1,32 @@
-@import '../../styles/core';
+@import "../../styles/core";
 
-.container {
-  width: 17%;
-  margin-top: 4%;
-  @include directionX;
-  @include main;
-  justify-content: center;
-  @include content-center;
-  .wraper {
-    @include directionX;
-    background-color: $color-bg;
-    .card {
-      text-align: center;
-      cursor: pointer;
-      box-shadow: 4px 8px 24px 1px $color-shadow;
-      img {
-        width: 180px;
-      }
-      p {
-        font-size: 30px;
-        margin-bottom: 14px;
-      }
+.card {
+  background-color: rgb(61, 61, 61);
+  padding: 10px;
+  color: white;
+  margin-bottom: 12px;
+  text-align: center;
+  cursor: pointer;
+  @include apply-at-sm-size {
+    width: 130px;
+  }
+  .num {
+    text-align: end;
+    margin-bottom: 5px;
+  }
+  img {
+    width: 180px;
+    height: 180px;
+    @include apply-at-sm-size {
+      height: 100px;
+      width: 100px;
     }
-    .myCardWraper {
-      @include directionY;
-      .myCard {
-        text-align: center;
-        box-shadow: 6px 12px 20px 1px $color-shadow;
-        width: 200px;
-        height: 280px;
-        @include content-center;
-        img {
-          width: 180px;
-        }
-        p {
-          font-size: 30px;
-          text-align: center;
-          margin-bottom: 16px;
-        }
-        .btn {
-          @include directionX;
-          justify-content: center;
-          gap: 20px;
-          button {
-            cursor: pointer;
-            width: 70px;
-            height: 24px;
-            border-radius: 4px;
-            color: $color-white;
-            background-color: $color-light-blue;
-          }
-        }
-      }
+  }
+  p {
+    font-size: 30px;
+    margin-bottom: 14px;
+    @include apply-at-sm-size {
+      font-size: 20px;
     }
   }
 }

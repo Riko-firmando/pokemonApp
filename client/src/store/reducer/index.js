@@ -15,9 +15,16 @@ export default function pokemonReducers(state = initialState, action) {
     case "GET_MY_POKEMONS":
       return { ...state, myPokemons: (state.myPokemons = action.payload) };
     case "RELEASE_POKEMON":
-      return { ...state, myPokemons: state.myPokemons.filter(pokemon => pokemon.id !== action.payload) };
+      return {
+        ...state,
+        myPokemons: state.myPokemons.filter(
+          (pokemon) => pokemon.id !== action.payload
+        ),
+      };
     case "RENAME_POKEMON":
-      let filter = state.myPokemons.filter(pokemon => pokemon.id !== action.payload.id);
+      let filter = state.myPokemons.filter(
+        (pokemon) => pokemon.id !== action.payload.id
+      );
       filter = filter.concat(action.payload.pokemon);
       filter.sort((a, b) => (a.id > b.id ? 1 : -1));
       return { ...state, myPokemons: (state.myPokemons = filter) };

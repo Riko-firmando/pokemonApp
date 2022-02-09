@@ -16,17 +16,28 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(getPokemons());
-  },[]);
+  }, []);
 
   return (
     <div className={classes.container}>
       <Navbar />
-      <div className={classes.wraper}>
-        {pokemons &&
-          pokemons.map((pokemon, idx) => {
-            return <Card pokemon={pokemon} key={idx} toDetail={toDetail} />;
-          })
-        }
+      <div className={classes.home_container}>
+        <div className={classes.btn}>
+          {/* <span>Next</span> <span>Previous</span> */}
+        </div>
+        <div className={classes.wraper}>
+          {pokemons &&
+            pokemons.map((pokemon, idx) => {
+              return (
+                <Card
+                  key={idx}
+                  pokemon={pokemon}
+                  num={idx}
+                  toDetail={toDetail}
+                />
+              );
+            })}
+        </div>
       </div>
     </div>
   );

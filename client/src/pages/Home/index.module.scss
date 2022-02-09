@@ -1,11 +1,39 @@
-@import '../../styles/core';
+@import "../../styles/core";
 
 .container {
-  .wraper {
-    width: 90%;
-    @include directionX;
-    @include content-center;
-    flex-wrap: wrap;
-    margin-bottom: 4%;
+  // background-color: rgb(223, 222, 222);
+  .home_container {
+    text-align: center;
+    .btn {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 17px;
+      font-weight: 700;
+      span {
+        padding: 10px;
+        border: 2px solid black;
+        transition: all 100ms ease-in;
+      }
+    }
+    .btn span:nth-child(1):hover {
+      background-color: black;
+      color: white;
+    }
+    .btn span:nth-child(2):hover {
+      background-color: black;
+      color: white;
+    }
+
+    .wraper {
+      width: 90%;
+      @include directionX;
+      @include content-center;
+      flex-wrap: wrap;
+      gap: 1%;
+      justify-content: center;
+      @include apply-at-sm-size {
+        column-gap: 15px;
+      }
+    }
   }
 }

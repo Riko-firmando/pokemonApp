@@ -1,11 +1,22 @@
-@import '../../styles/core';
+@import "../../styles/core";
 
 .container {
   .wraper {
-    width: 90%;
-    @include directionX;
-    @include content-center;
-    flex-wrap: wrap;
-    margin-bottom: 4%;
+    text-align: center;
+    .action {
+    }
+    .listPokemon {
+      padding: 0px 20px;
+      width: 85%;
+      @include directionX;
+      @include content-center;
+      flex-wrap: wrap;
+      gap: 1%;
+      justify-content: center;
+      @include apply-at-sm-size {
+        padding: 0px 10px;
+        column-gap: 13px;
+      }
+    }
   }
 }
