@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import classes from "./index.module.scss";
 import { useNavigate } from "react-router-dom";

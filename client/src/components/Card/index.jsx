@@ -1,15 +1,7 @@
 import React, { useState } from "react";
 import classes from "./index.module.scss";
-import { useLocation } from "react-router-dom";
 
-export const Card = ({
-  pokemon,
-  toDetail,
-  releasePokemon,
-  setSelectedPokemon,
-  num,
-}) => {
-  const location = useLocation();
+export const Card = ({ pokemon, toDetail, num }) => {
   return (
     <div
       className={classes.card}
